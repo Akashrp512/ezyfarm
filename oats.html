@@ -1,0 +1,3061 @@
+<!DOCTYPE html>
+<html lang=en prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Oats: A Guide On How To Raise Productivity Of The Crop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link
+  rel="stylesheet"
+  href="corn.css"
+/>
+   
+    <style>
+        .site-header {
+            z-index: 100;
+            -webkit-transition: background-color .4s ease;
+            -o-transition: background-color .4s ease;
+            transition: background-color .4s ease;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #181f26;
+            -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .4);
+            box-shadow: 0 0 50px rgba(0, 0, 0, .4)
+        }
+
+        .site-header:after {
+            display: block;
+            content: "";
+            clear: both
+        }
+
+       
+
+        .site-header_clear {
+            background-color: rgba(0, 0, 0, 0)
+        }
+
+        .site-header_clear .logo {
+            -webkit-transition: opacity .6s ease;
+            -o-transition: opacity .6s ease;
+            transition: opacity .6s ease;
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .site-header_clear:hover {
+            background-color: rgba(1, 2, 3, .2)
+        }
+
+        .site-header_clear:hover .logo {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .site-header_clear:not(.site-header_scrolled):not(:hover) .btn-outline {
+            background-color: #f46036;
+            color: #fff
+        }
+
+        .site-header_menu-toggled {
+            background-color: #181f26 !important;
+            text-transform: uppercase
+        }
+
+        .site-header_modern {
+            background: #212a33
+        }
+
+        .site-header_modern .site-nav {
+            color: #c1cfdb
+        }
+
+        .site-header_modern .site-nav .menu-item-submenu>a:after {
+            border-right-color: #2f8ffc;
+            border-bottom-color: #2f8ffc
+        }
+
+        .site-header_modern .site-nav .menu-item-submenu:after {
+            border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #2f8ffc
+        }
+
+        .site-header_modern .sub-menu-container {
+            background: #181f26
+        }
+
+        .site-header_modern.site-header_menu-toggled {
+            background: #181f26 !important
+        }
+
+        .site-header_scrolled {
+            background: #181f26
+        }
+
+        .site-header_scrolled .logo {
+            float: left;
+            padding: 4px 0 0
+        }
+
+        .site-header-main {
+            position: relative;
+            z-index: 2;
+            height: 72px;
+            max-width: 1080px;
+            padding: 0 65px;
+            margin: auto;
+            background: #181f26
+        }
+
+        .site-header-main,
+        .site-header .btn-outline,
+        .site-header .site-logo {
+            -webkit-transition: all .4s ease;
+            -o-transition: all .4s ease;
+            transition: all .4s ease
+        }
+
+        .site-header .btn-outline {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 10px;
+            margin-top: 26px;
+            font-size: 14px
+        }
+
+        .site-header_scrolled .site-header-main {
+            height: 72px
+        }
+
+        .site-header_scrolled .site-logo {
+            height: 60px;
+            width: 120px
+        }
+
+        .site-header_scrolled .btn-outline {
+            margin-top: 21px
+        }
+
+        .site-header .js-progress-bar {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            height: 4px;
+            background: #f46036;
+            -webkit-transition: all .1s;
+            -o-transition: all .1s;
+            transition: all .1s
+        }
+
+        
+        .site-nav {
+            color: #c1cfdb;
+            font-size: 14px;
+            margin-left: auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            text-transform: none
+        }
+
+        .site-nav,
+        .site-nav-list {
+            height: 100%
+        }
+
+        .site-nav-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-left: auto;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+        .site-nav .logo {
+  color: white;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+        .site-nav .btn-mob-menu {
+            display: none;
+            width: 25px;
+            height: 16px;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            position: relative;
+            -webkit-transition: border-color .3s ease;
+            -o-transition: border-color .3s ease;
+            transition: border-color .3s ease;
+            margin: 0 15px 0 auto
+        }
+
+        .site-nav .btn-mob-menu:after,
+        .site-nav .btn-mob-menu:before {
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin-top: -1px;
+            background-color: #fff;
+            -webkit-transition: background .3s ease, -webkit-transform .4s ease;
+            transition: background .3s ease, -webkit-transform .4s ease;
+            -o-transition: transform .4s ease, background .3s ease;
+            transition: transform .4s ease, background .3s ease;
+            transition: transform .4s ease, background .3s ease, -webkit-transform .4s ease
+        }
+
+        .site-nav .btn-mob-menu.toggled {
+            border-color: rgba(0, 0, 0, 0)
+        }
+
+        .site-nav .btn-mob-menu.toggled:before {
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
+
+        .site-nav .btn-mob-menu.toggled:after {
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+
+        .site-nav .btn-mob-menu.toggled:focus {
+            border-color: rgba(0, 0, 0, 0)
+        }
+
+        .site-nav .btn-mob-menu:focus {
+            border-color: #b7dbea
+        }
+
+        .site-nav .btn-mob-menu:focus:after,
+        .site-nav .btn-mob-menu:focus:before {
+            background: #b7dbea
+        }
+
+        .site-nav .item-head {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch
+        }
+
+        .site-nav .item-head_text {
+            padding: 9px 0;
+            color: #7e9bb4;
+            font-weight: 400
+        }
+
+        .site-nav .item-link {
+            color: #fff;
+            font-weight: 600;
+            padding-top: 37px;
+            padding-bottom: 37px;
+            display: block;
+            -webkit-transition: all .4s;
+            -o-transition: all .4s;
+            transition: all .4s;
+            font-size: 14px;
+            line-height: 20px
+        }
+
+        .site-nav .item-link:focus,
+        .site-nav .item-link:hover {
+            color: #2f8ffc
+        }
+
+        .site-nav .item-link:focus .item-arrow:after,
+        .site-nav .item-link:hover .item-arrow:after {
+            border-color: #2f8ffc
+        }
+
+        .site-nav .item-link:focus .sub-menu,
+        .site-nav .item-link:hover .sub-menu {
+            display: block;
+            overflow: hidden
+        }
+
+        .site-nav .item-link.not-link:focus,
+        .site-nav .item-link.not-link:hover {
+            cursor: default
+        }
+
+        .site-nav .item-arrow {
+            position: relative;
+            min-width: 60px;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            border: none;
+            background: rgba(0, 0, 0, 0);
+            cursor: pointer
+        }
+
+        .site-nav .item-arrow:focus:after,
+        .site-nav .item-arrow:hover:after {
+            border-color: #2f8ffc
+        }
+
+        .site-nav .item-arrow:after {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            background: rgba(0, 0, 0, 0);
+            border: 2px solid #fff;
+            border-top: none;
+            border-left: none;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+            margin-top: -2px;
+            -webkit-transition: border-color .2s;
+            -o-transition: border-color .2s;
+            transition: border-color .2s
+        }
+
+        .site-nav .menu-item {
+            display: inline-block;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s
+        }
+
+        .site-nav .menu-item.active .item-link {
+            color: #2f8ffc
+        }
+
+        .site-nav .menu-item.active .item-link .item-arrow:after {
+            border-color: #2f8ffc
+        }
+
+        .site-nav .sub-menu {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: none;
+            padding-left: 10px
+        }
+
+        .site-nav .sub-menu .item-link {
+            display: block;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s;
+            padding: 6px 0;
+            margin: 2px 0
+        }
+
+        .site-nav .sub-menu .item-link:focus,
+        .site-nav .sub-menu .item-link:hover {
+            color: #2f8ffc
+        }
+
+        
+        body,
+        html {
+            height: 100%
+        }
+
+        body {
+            background-color: #fff;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            text-size-adjust: none;
+            color: #212a33;
+            min-height: 100%;
+            font: 400 16px/1.2 Open Sans, sans-serif
+        }
+
+        body.no-scroll {
+            overflow: hidden
+        }
+
+        a {
+            color: #f8a086;
+            text-decoration: none;
+            outline: 0
+        }
+
+        a:focus,
+        a:hover {
+            text-decoration: none;
+            color: #f6805e
+        }
+
+        strong {
+            font-weight: 700
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 400
+        }
+
+        input {
+            font-family: Open Sans, sans-serif
+        }
+
+        .section-title,
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.5;
+            text-transform: uppercase;
+            text-align: center
+        }
+
+        .section-title span,
+        .title span {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: none;
+            max-width: 810px;
+            margin: auto
+        }
+
+        .section-title_decor,
+        .title_decor {
+            position: relative;
+            text-align: left;
+            max-width: unset;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 30px;
+            padding-bottom: 22px;
+            font-size: 22px;
+            line-height: 30px;
+            text-transform: uppercase
+        }
+
+        .section-title_decor:after,
+        .title_decor:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: #92d4eb
+        }
+
+        .section-title_decor.section-title_center,
+        .section-title_decor.title_center,
+        .title_decor.section-title_center,
+        .title_decor.title_center {
+            text-align: center
+        }
+
+        .section-title_decor.section-title_center:after,
+        .section-title_decor.title_center:after,
+        .title_decor.section-title_center:after,
+        .title_decor.title_center:after {
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+
+        .section-title_decor.title_invert:after,
+        .title_decor.title_invert:after {
+            background: #fff
+        }
+
+        .wrapper {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            flex-direction: column
+        }
+
+       
+
+        .site-wrapper {
+            flex-direction: column;
+            min-height: 100%;
+            overflow: hidden
+        }
+
+        .modal {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 20px 0;
+            z-index: 1050;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important
+        }
+
+        .grecaptcha-badge,
+        .modal {
+            visibility: hidden
+        }
+
+        .btn {
+            display: inline-block;
+            vertical-align: middle;
+            font: 700 12px/1.2 Open Sans, sans-serif;
+            text-decoration: none;
+            padding: 10px 25px;
+            margin: 0;
+            text-transform: uppercase;
+            -webkit-transition: background-color .1s linear, color .1s linear, border-color .1s linear;
+            -o-transition: background-color .1s linear, color .1s linear, border-color .1s linear;
+            transition: background-color .1s linear, color .1s linear, border-color .1s linear;
+            background-color: #f46036;
+            border: 1px solid #f46036;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-appearance: none
+        }
+
+        .btn.disabled {
+            opacity: .8;
+            pointer-events: none
+        }
+
+        .btn[disabled] {
+            background-color: rgba(67, 62, 78, .1) !important;
+            border-color: rgba(0, 0, 0, 0) !important;
+            cursor: default !important
+        }
+
+        .btn[disabled]:before {
+            display: none
+        }
+
+        .btn[disabled].toggle span {
+            line-height: 24px;
+            color: #fff;
+            padding-left: 64px;
+            display: inline-block;
+            position: relative
+        }
+
+        .btn[disabled].toggle span:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 24px;
+            width: 44px;
+            background: #4b5c6c;
+            border-radius: 16px;
+            margin: 0
+        }
+
+        .btn[disabled].toggle span:after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            border-radius: 50%;
+            border: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            -webkit-transition: -webkit-transform .2s;
+            transition: -webkit-transform .2s;
+            -o-transition: transform .2s;
+            transition: transform .2s;
+            transition: transform .2s, -webkit-transform .2s
+        }
+
+        .btn[disabled].toggle input:checked~span:before {
+            background: #2f8ffc
+        }
+
+        .btn[disabled].toggle input:checked~span:after {
+            -webkit-transform: translate(20px);
+            -ms-transform: translate(20px);
+            transform: translate(20px)
+        }
+
+        .btn[disabled].toggle.text-right span {
+            padding: 0 64px 0 0
+        }
+
+        .btn[disabled].toggle.text-right span:before {
+            right: 0;
+            left: auto
+        }
+
+        .btn[disabled].toggle.text-right span:after {
+            left: auto;
+            right: 22px
+        }
+
+        .btn:focus,
+        .btn:hover {
+            text-decoration: none;
+            cursor: pointer;
+            background-color: #f6805e;
+            color: #fff;
+            border-color: #f6805e
+        }
+
+        .btn-lg {
+            font-size: 18px;
+            border-radius: 4px;
+            padding: 22px 45px 20px
+        }
+
+        .btn-sm {
+            height: 40px;
+            padding: 11px 15px;
+            font-size: 14px;
+            letter-spacing: 1px
+        }
+
+        .btn-md {
+            font-size: 16px;
+            padding: 14px 32px 13px;
+            border-radius: 4px;
+            min-width: 180px
+        }
+
+        .btn-block {
+            display: block;
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        .btn-outline {
+            border: 1px solid #f46036;
+            color: #f46036;
+            background-color: rgba(0, 0, 0, 0)
+        }
+
+        .btn-inverse-outline {
+            border: 1px solid #4c9ae7;
+            color: #4c9ae7;
+            background-color: rgba(0, 0, 0, 0)
+        }
+
+        .btn-inverse-outline:focus,
+        .btn-inverse-outline:hover {
+            border: 1px solid #4c9ae7;
+            background-color: #4c9ae7;
+            color: #fff
+        }
+
+        .btn-light-outline {
+            border: 1px solid #4c9ae7;
+            color: #4c9ae7;
+            background-color: rgba(0, 0, 0, 0)
+        }
+
+        .btn-light-outline:before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border: 0 solid #dcebfb;
+            border-radius: 8px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s
+        }
+
+        .btn-light-outline:focus,
+        .btn-light-outline:hover {
+            border: 1px solid #4c9ae7;
+            background-color: rgba(0, 0, 0, 0);
+            color: #4c9ae7
+        }
+
+        .btn-light-outline:focus:before,
+        .btn-light-outline:hover:before {
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-width: 3px
+        }
+
+        .btn-white-outline {
+            border: 1px solid #fff;
+            background: rgba(0, 0, 0, 0);
+            color: #fff
+        }
+
+        .btn-white-outline:before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border: 0 solid hsla(0, 0%, 100%, .5);
+            border-radius: 8px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
+            transition: all .3s
+        }
+
+        .btn-white-outline:focus,
+        .btn-white-outline:hover {
+            border: 1px solid #fff;
+            background: rgba(0, 0, 0, 0);
+            color: #fff
+        }
+
+        .btn-white-outline:focus:before,
+        .btn-white-outline:hover:before {
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-width: 3px
+        }
+
+        .btn-primary {
+            background-color: #3a9bcd;
+            color: #fff
+        }
+
+        .btn-primary:focus,
+        .btn-primary:hover {
+            background-color: #2c8aba;
+            color: #fff
+        }
+
+        .btn-inverse {
+            background-color: #4c9ae7;
+            border-color: #4c9ae7
+        }
+
+        .btn-inverse:focus,
+        .btn-inverse:hover {
+            background-color: #63a4e5;
+            border-color: #63a4e5
+        }
+
+        .btn-grey {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border-color: #e4e8eb !important;
+            background-color: #e4e8eb !important;
+            color: #433e4e !important
+        }
+
+        .btn.btn-text {
+            background: none;
+            border: 0;
+            padding: 0;
+            text-transform: unset;
+            min-width: 180px;
+            font-size: 14px;
+            min-height: 20px
+        }
+
+        .btn.btn-text_collor {
+            color: #4c9ae7
+        }
+
+        .btn.btn-text:focus,
+        .btn.btn-text:hover {
+            text-decoration: underline
+        }
+
+        .btn.btn-text:after {
+            content: "";
+            display: inline-block;
+            width: .5em;
+            height: .5em;
+            vertical-align: middle;
+            margin-left: .5em;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-top: 2px solid;
+            border-right: 2px solid
+        }
+
+        .btn.btn-text.btn-lg {
+            font-size: 18px
+        }
+
+        .btn.btn-text.arrow-effect:after {
+            display: none
+        }
+
+        .btn.btn-text.arrow-effect .arrow:before {
+            background: #fff
+        }
+
+        .btn.btn-text.arrow-effect .arrow:after {
+            border-color: #fff
+        }
+
+        .btn.btn-text_invert {
+            color: #433e4e
+        }
+
+        .btn.btn-text_invert.arrow-effect .arrow:before {
+            background: #433e4e
+        }
+
+        .btn.btn-text_invert.arrow-effect .arrow:after {
+            border-color: #433e4e
+        }
+
+        .btn.arrow-effect {
+            position: relative
+        }
+
+        .btn.arrow-effect.btn-sm {
+            padding-right: 5px
+        }
+
+        .btn.arrow-effect.btn-sm .icon {
+            width: 30px;
+            height: 30px
+        }
+
+        .btn.arrow-effect.btn-sm .arrow:before {
+            width: 11px;
+            height: 2px;
+            margin-top: 15px;
+            margin-left: 9px
+        }
+
+        .btn.arrow-effect.btn-sm .arrow:after {
+            left: 12px;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            border-radius: 1px
+        }
+
+        .btn.arrow-effect.btn-md {
+            padding-right: 14px
+        }
+
+        .btn.arrow-effect.btn-lg {
+            padding-right: 30px
+        }
+
+        .btn.arrow-effect .icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            margin-bottom: -40px;
+            position: relative;
+            top: -23px;
+            overflow: hidden
+        }
+
+        .btn.arrow-effect .arrows {
+            -webkit-transition: all .4s .1s;
+            -o-transition: all .4s .1s;
+            transition: all .4s .1s;
+            -webkit-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d
+        }
+
+        .btn.arrow-effect .arrow,
+        .btn.arrow-effect .arrows {
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%
+        }
+
+        .btn.arrow-effect .arrow:before {
+            content: "";
+            display: block;
+            background-color: #fff;
+            width: 15px;
+            height: 2px;
+            margin-top: 19px;
+            margin-left: 12px
+        }
+
+        .btn.arrow-effect .arrow:after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
+
+        .btn.arrow-effect .arrow1 {
+            -webkit-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            -webkit-transform: translate3d(-105%, 0, 0) rotateY(90deg);
+            transform: translate3d(-105%, 0, 0) rotateY(90deg)
+        }
+
+        .btn.arrow-effect .arrow2 {
+            -webkit-transition: all .4s .1s;
+            -o-transition: all .4s .1s;
+            transition: all .4s .1s;
+            -webkit-transform-origin: 0 50%;
+            -ms-transform-origin: 0 50%;
+            transform-origin: 0 50%
+        }
+
+        .btn.arrow-effect.btn-light-outline .arrow:before {
+            background-color: #4c9ae7
+        }
+
+        .btn.arrow-effect.btn-light-outline .arrow:after {
+            border-color: #4c9ae7
+        }
+
+        .btn.arrow-effect.btn-inverse-outline .arrow:before {
+            background-color: #4c9ae7
+        }
+
+        .btn.arrow-effect.btn-inverse-outline .arrow:after {
+            border-color: #4c9ae7
+        }
+
+        .btn.arrow-effect:focus .arrows,
+        .btn.arrow-effect:hover .arrows {
+            -webkit-transform: translateZ(30px) rotateY(-90deg);
+            transform: translateZ(30px) rotateY(-90deg)
+        }
+
+        .btn.arrow-effect:focus .arrow2,
+        .btn.arrow-effect:hover .arrow2 {
+            -webkit-transform: translate3d(105%, 0, 0);
+            transform: translate3d(105%, 0, 0)
+        }
+
+        a.btn.arrow-effect .icon {
+            top: -22px
+        }
+
+        .btn-grid {
+            margin: -10px;
+            padding: 28px 0 0;
+            text-align: center
+        }
+
+        .btn-grid .btn-cell {
+            margin: 10px;
+            font-size: 0
+        }
+
+        .btn-grid .btn {
+            min-width: 180px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%
+        }
+
+        .btn-grid_desktop {
+            display: none;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start
+        }
+
+        
+
+        .section-intro {
+            background-color: #335d90;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 72px 0 84px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #fff
+        }
+
+        .section-intro-main {
+            max-width: 1662px;
+            margin: auto;
+            padding: 0 15px
+        }
+
+        .section-intro-head {
+            padding: 15px 0 0
+        }
+
+        .section-intro-head .breadcrumbs {
+            position: relative !important
+        }
+
+        .section-intro-content .btn-grid {
+            margin: 0
+        }
+
+        .section-intro .breadcrumbs {
+            max-width: 1280px;
+            margin: auto;
+            padding: 0 60px;
+            z-index: 5;
+            position: absolute
+        }
+
+        .section-intro-body {
+            margin-top: 49px;
+            text-align: center
+        }
+
+        .section-intro .box,
+        .section-intro .col {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .section-intro .col {
+            position: relative;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .section-intro .col_img {
+            display: none;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            margin: 23px 0 0;
+            padding: 0 0 20px
+        }
+
+        .section-intro .col_img .img-box img {
+            display: block;
+            max-width: 100%;
+            border-radius: 8px;
+            -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, .4);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .4)
+        }
+
+        .section-intro .col_text {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+
+        .section-intro .title {
+            padding: 0 0 20px;
+            max-width: 927px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .section-intro .text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 auto;
+            max-width: 960px
+        }
+
+        .section-intro .text.thin {
+            max-width: 480px
+        }
+
+        .section-intro .text.wide {
+            max-width: 1050px
+        }
+
+        .section-intro .text+.text {
+            margin-top: 15px
+        }
+
+        .section-intro .text sup {
+            font-size: 9px;
+            vertical-align: super
+        }
+
+        .section-intro .btn-grid,
+        .section-intro .row-btn {
+            padding: 40px 0 0
+        }
+
+        .section-intro .link-wrap {
+            font-size: 14px;
+            margin: 18px 0 -33px;
+            font-weight: 600
+        }
+
+        .section-intro .row-btns {
+            padding-top: 20px
+        }
+
+        .section-intro .row-btns .btn {
+            min-width: 180px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 15px 15px 0
+        }
+
+        .section-intro .footer-box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            max-width: 660px;
+            margin: 20px auto 0;
+            padding: 28px 24px 24px;
+            border-radius: 8px;
+            background: #fff;
+            color: #010203
+        }
+
+        .section-intro .footer-box .row-btn {
+            padding: 0 0 4px 20px
+        }
+
+        .section-intro .footer-box .btn {
+            margin: 0;
+            min-width: 200px;
+            max-width: 100%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0;
+            background: #f27e30
+        }
+
+        .section-intro .footer-box .btn:focus,
+        .section-intro .footer-box .btn:hover {
+            background-color: #ff9b00;
+            border-color: #ff9b00
+        }
+
+        .section-intro .gift-icon {
+            width: 48px;
+            height: 48px;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 48px;
+            flex: 0 0 48px;
+            margin-right: 12px
+        }
+
+        .section-intro .gift-text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: left;
+            margin: -5px 0;
+            letter-spacing: -.5px
+        }
+
+        .section-intro.invert {
+            background-color: #eeeef2;
+            color: #212a33
+        }
+
+        .section-intro.invert .breadcrumbs,
+        .section-intro.invert .breadcrumbs-link {
+            color: #433e4e
+        }
+
+        .section-intro.invert .breadcrumbs-icon:before {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='8' fill='none'%3E%3Cpath d='M4.333 0l.94.94L2.22 4l3.053 3.06-.94.94-4-4 4-4z' fill='%234a5a6a'/%3E%3C/svg%3E")
+        }
+
+        .section-intro.invert .breadcrumbs-item:last-child {
+            color: #f46036
+        }
+
+        .section-intro.invert .breadcrumbs-link:focus,
+        .section-intro.invert .breadcrumbs-link:hover {
+            color: #5c2a2a
+        }
+
+        .section-intro.invert .title {
+            padding: 0
+        }
+
+        .section-intro.invert .section-intro-head {
+            border-bottom: 1px solid #d9d6de;
+            padding: 22px 0 21px;
+            margin: 0 15px
+        }
+
+        .section-intro.invert .section-intro-main {
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        .section-intro-case {
+            padding-bottom: 0
+        }
+
+        .section-intro .folding-text {
+            overflow: hidden;
+            max-height: 1300px;
+            -webkit-transition: max-height .4s;
+            -o-transition: max-height .4s;
+            transition: max-height .4s
+        }
+
+        .section-intro .folding-text.folded {
+            max-height: 142px
+        }
+
+        .section-intro .text-toggle {
+            margin-top: 20px;
+            display: none
+        }
+
+        .section-intro .text-toggle.active {
+            display: block
+        }
+
+        .section-intro .text-toggle .btn {
+            font-size: 16px;
+            letter-spacing: .5px;
+            font-weight: 600;
+            background: rgba(0, 0, 0, 0) !important;
+            border: none;
+            text-transform: none
+        }
+
+        .section-intro .text-toggle .btn:after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            -webkit-transform: rotate(-45deg) translate(10px, 5px);
+            -ms-transform: rotate(-45deg) translate(10px, 5px);
+            transform: rotate(-45deg) translate(10px, 5px);
+            -webkit-transform-origin: center center;
+            -ms-transform-origin: center center;
+            transform-origin: center center
+        }
+
+        .section-intro .text-toggle .btn.less:after {
+            -webkit-transform: rotate(135deg) translate(-6px, -9px);
+            -ms-transform: rotate(135deg) translate(-6px, -9px);
+            transform: rotate(135deg) translate(-6px, -9px);
+            top: 1px
+        }
+
+        .section-intro .text-toggle .btn:focus {
+            text-decoration: underline
+        }
+
+        @media screen and (min-width:568px) {
+            .btn-grid {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: stretch;
+                -ms-flex-align: stretch;
+                align-items: stretch
+            }
+            .btn-grid .btn {
+                width: auto
+            }
+            .btn-grid_desktop {
+                display: none;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .site-footer-top .nav-footer {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: auto;
+                -webkit-column-gap: 25px;
+                -moz-column-gap: 25px;
+                column-gap: 25px
+            }
+            .site-footer-top .nav-footer-col-1 {
+                grid-column-start: span 1
+            }
+            .site-footer-top .nav-footer-col-2 {
+                grid-column-start: span 2
+            }
+            .site-footer-top .nav-footer-col-2 .nav-footer-list-items {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2
+            }
+            .site-footer-top .footer {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row
+            }
+            .site-footer-top .chat-footer {
+                margin-right: 60px
+            }
+            .site-footer-top .rd-btn-grid {
+                padding-top: 16px;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start
+            }
+            .site-footer-top .wrapper-list {
+                grid-template-columns: repeat(3, 1fr);
+                margin: auto
+            }
+            .btn-grid {
+                padding-top: 40px
+            }
+        }
+
+        @media screen and (min-width:840px) {
+            .site-footer-top .wrapper-list {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        @media screen and (min-width:861px) {
+            .section-intro .col {
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start
+            }
+        }
+
+        @media (min-width:1024px) {
+            .site-header_long .site-nav .item-link {
+                font-size: 12px
+            }
+            .site-header_long .site-nav .btn-outline {
+                font-size: 12px;
+                padding-left: 6px;
+                padding-right: 6px;
+                margin-left: 0
+            }
+            .site-nav .separator {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px
+            }
+            .site-nav .separator:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 16px;
+                left: 0;
+                width: 1px;
+                bottom: 16px;
+                background: #2c3743
+            }
+            .site-nav .separator.visible {
+                display: block
+            }
+            .site-nav .sub-menu {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                padding: 0;
+                min-width: 200px;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                background-color: #212a33;
+                -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .4);
+                box-shadow: 0 0 50px rgba(0, 0, 0, .4);
+                border-radius: 4px
+            }
+            .site-nav .sub-menu .sub-menu-list {
+                position: relative;
+                padding: 10px 0 10px 16px
+            }
+            .site-nav .sub-menu .sub-menu-list_double {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2
+            }
+            .site-nav .sub-menu-in {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex
+            }
+            .site-nav .sub-menu .menu-item {
+                position: static;
+                display: block;
+                height: auto;
+                margin: 0;
+                padding-right: 14px
+            }
+            .site-nav .sub-menu .menu-item .item-link {
+                height: auto;
+                max-width: 230px
+            }
+            .site-nav .sub-menu .menu-item.toggled>.sub-menu {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex
+            }
+            .site-nav .sub-menu .menu-item.toggled>.item-head .item-link {
+                color: #2f8ffc
+            }
+            .site-nav .sub-menu .menu-item.toggled>.item-head .item-link:focus+.item-arrow:after,
+            .site-nav .sub-menu .menu-item.toggled>.item-head .item-link:hover+.item-arrow:after {
+                border-color: #fff
+            }
+            .site-nav .sub-menu .item-arrow:after {
+                -webkit-transform: translateY(-25%) rotate(-45deg);
+                -ms-transform: translateY(-25%) rotate(-45deg);
+                transform: translateY(-25%) rotate(-45deg)
+            }
+            .site-nav .sub-menu_second,
+            .site-nav .sub-menu_third {
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0);
+                position: relative;
+                padding: 0
+            }
+            .site-nav .sub-menu_second {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: -webkit-min-content;
+                width: -moz-min-content;
+                width: min-content;
+                padding: 9px 10px 16px
+            }
+            .site-nav .sub-menu_second .item-arrow {
+                display: none
+            }
+            .site-nav .sub-menu_second .item-head {
+                cursor: default
+            }
+            .site-nav .sub-menu_second .menu-item .item-link {
+                white-space: normal
+            }
+            .site-nav .sub-menu_second>.sub-menu-in>.menu-item {
+                width: 170px
+            }
+            .site-nav .sub-menu_second>.sub-menu-in>.menu-item:last-child {
+                padding-right: 0
+            }
+            .site-nav .sub-menu_third {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                position: relative;
+                top: 0;
+                min-width: unset
+            }
+            .site-nav .sub-menu_third .item-link {
+                padding: 2px 0;
+                color: #c1cfdb;
+                font-weight: 400
+            }
+            .site-nav .menu-item {
+                margin-left: 23px
+            }
+            .site-nav .menu-item_has-sub:before {
+                display: none;
+                content: "";
+                z-index: 2;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: calc(100% - 17px);
+                left: calc(50% - 10px);
+                border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #212a33;
+                border-style: solid;
+                border-width: 0 7px 8px
+            }
+            .site-nav .menu-item_has-sub>.sub-menu {
+                -webkit-transition: height .2s, width .2s;
+                -o-transition: height .2s, width .2s;
+                transition: height .2s, width .2s;
+                overflow: hidden
+            }
+            .site-nav .menu-item_has-sub.toggled:before {
+                display: block
+            }
+            .site-nav .menu-item_has-sub.toggled>.sub-menu {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex
+            }
+            .site-nav .item-link {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 4px 0;
+                height: 72px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box
+            }
+            .site-nav .item-link:focus,
+            .site-nav .item-link:hover {
+                color: #2f8ffc
+            }
+            .site-nav .item-link:focus+.item-arrow:after,
+            .site-nav .item-link:hover+.item-arrow:after {
+                border-color: #2f8ffc
+            }
+            .site-nav .item-arrow {
+                width: 20px;
+                -webkit-box-flex: 0;
+                -ms-flex-positive: 0;
+                flex-grow: 0;
+                min-width: unset;
+                cursor: default
+            }
+            .site-nav .item-arrow:after {
+                right: 6px
+            }
+            .site-nav .item-arrow:hover:after {
+                border-color: #fff
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            .site-footer-top .nav-footer {
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: auto;
+                -webkit-column-gap: 25px;
+                -moz-column-gap: 25px;
+                column-gap: 25px
+            }
+            .site-footer-top .nav-footer-col-1 {
+                grid-column-start: span 1
+            }
+            .site-footer-top .nav-footer-col-2 {
+                grid-column-start: span 2
+            }
+            .site-footer-top .wrapper-list {
+                grid-template-columns: repeat(4, 1fr)
+            }
+            .site-footer-top .item-2,
+            .site-footer-top .item-4 {
+                margin-left: 40px
+            }
+            .section-title_decor,
+            .title_decor {
+                font-size: 32px;
+                line-height: 44px;
+                margin-bottom: 50px
+            }
+            .btn-grid_mob {
+                display: none
+            }
+            .btn-grid_desktop {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex
+            }
+        }
+
+        @media screen and (min-width:1190px) {
+            .section-intro .box {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row
+            }
+            .section-intro .col_img {
+                display: block;
+                width: 47%;
+                margin: 0
+            }
+            .section-intro .col_img .img-box {
+                margin-right: -60px
+            }
+            .section-intro .col_text {
+                padding-right: 40px;
+                width: 53%
+            }
+        }
+
+        @media only screen and (min-width:1200px) {
+            .section-intro_company {
+                padding-bottom: 109px
+            }
+            .section-intro_company .section-intro-body {
+                margin-top: 64px
+            }
+            .section-intro_company .title {
+                font-size: 72px;
+                line-height: 60px;
+                padding-bottom: 49px
+            }
+            .section-intro_company .text {
+                font-size: 24px;
+                line-height: 33px;
+                max-width: 1180px
+            }
+        }
+
+        @media screen and (min-width:1280px) {
+            .site-footer-top .nav-footer {
+                grid-template-columns: repeat(9, 1fr)
+            }
+            .site-footer-top .nav-footer-col-separator {
+                display: block;
+                grid-column-start: span 1
+            }
+            .site-footer-top .nav-footer-col-1 {
+                grid-column-start: span 2;
+                height: -webkit-max-content;
+                height: -moz-max-content;
+                height: max-content
+            }
+            .site-footer-top .nav-footer-col-2 {
+                grid-column-start: span 4;
+                height: auto
+            }
+            .site-footer-top .wrapper-list {
+                grid-gap: 40px
+            }
+        }
+
+        @media screen and (min-width:1281px) {
+            .site-header-main {
+                max-width: 1280px
+            }
+        }
+
+        @media screen and (min-width:1350px) {
+            .section-intro .col_img .img-box {
+                margin-right: -140px
+            }
+        }
+
+        @media screen and (max-width:1400px) {
+            .site-header_long .site-header-main {
+                padding-left: 35px;
+                padding-right: 35px
+            }
+        }
+
+        @media screen and (max-width:1320px) {
+            .section-intro .breadcrumbs,
+            .site-header-main {
+                padding: 0 15px
+            }
+        }
+
+        @media screen and (max-width:1160px) {
+            .site-header .site-logo {
+                width: 120px;
+                height: 60px
+            }
+        }
+
+        @media only screen and (max-width:1090px) {
+            .site-footer {
+                padding: 46px 0
+            }
+        }
+
+        @media screen and (max-width:1090px) {
+            .site-header_modern .site-nav-list {
+                background: #181f26
+            }
+            .site-header .btn-outline {
+                margin-left: 20px
+            }
+            .site-footer-inner {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse
+            }
+            .site-footer {
+                text-align: center
+            }
+            .site-footer .footer-menu {
+                padding: 30px 0
+            }
+            .site-footer .social-footer {
+                text-align: center;
+                margin-left: 0;
+                font-size: 20px
+            }
+            .site-footer .social-footer li {
+                margin: 0 0 0 36px
+            }
+            .site-footer .social-footer li svg {
+                width: 18px;
+                height: 18px
+            }
+            .site-footer .dropdown {
+                margin: 0 0 30px
+            }
+        }
+
+        @media only screen and (max-width:1040px) {
+            .site-footer-main {
+                padding: 0 15px;
+                overflow: hidden
+            }
+        }
+
+        @media (max-width:1023px) {
+            .lansat-nav-toggled,
+            .site-menu-toggled {
+                overflow: hidden
+            }
+            .site-nav-list {
+                display: none;
+                float: none;
+                position: fixed;
+                max-width: unset;
+                min-width: unset;
+                left: 0;
+                right: 0;
+                top: 72px;
+                bottom: 0;
+                background-color: #212a33;
+                overflow: auto;
+                z-index: 1000;
+                height: auto;
+                padding-bottom: 15px;
+                min-width: auto
+            }
+            .site-nav-list.showed {
+                display: block;
+                padding-top: 60px
+            }
+            .site-nav .flags {
+                display: none
+            }
+            .site-nav .flags.showed {
+                display: block;
+                position: absolute;
+                z-index: 1000;
+                right: 30px;
+                top: 100%;
+                padding-top: 20px;
+                height: 38px
+            }
+            .site-nav .flags.showed .main-flag {
+                background: #181f26;
+                height: 16px
+            }
+            .site-nav .flags.showed .main-flag.item {
+                background-repeat: no-repeat;
+                background-position: center left 8px
+            }
+            .site-nav .flags.showed span {
+                margin-left: auto
+            }
+            .site-nav .flags.showed .flag-list {
+                top: 45px
+            }
+            .site-nav .btn-mob-menu {
+                display: block
+            }
+            .site-nav .item-link {
+                padding: 15px 20px;
+                text-transform: uppercase
+            }
+            .site-nav .menu-item {
+                display: block;
+                height: auto;
+                margin: 0
+            }
+            .site-nav .menu-item:after,
+            .site-nav .menu-item:before {
+                display: none !important
+            }
+            .site-nav .menu-item.toggled>.item-head .item-link {
+                color: #2f8ffc
+            }
+            .site-nav .item-head.collapsed .item-arrow:after {
+                border-color: #fff;
+                -webkit-transform: translateY(-50%) rotate(45deg);
+                -ms-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
+                margin-top: -3px
+            }
+            .site-nav .item-arrow:after {
+                border-color: #2f8ffc;
+                -webkit-transform: translateY(-50%) rotate(-135deg);
+                -ms-transform: translateY(-50%) rotate(-135deg);
+                transform: translateY(-50%) rotate(-135deg);
+                margin-top: 2px
+            }
+            .site-nav .item-arrow.collapsed:after {
+                border-color: #fff;
+                -webkit-transform: translateY(-50%) rotate(45deg);
+                -ms-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
+                margin-top: -3px
+            }
+            .site-nav .sub-menu {
+                background-color: rgba(0, 0, 0, 0);
+                position: static;
+                border-top: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                padding: 0 0 0 30px;
+                -webkit-transition: height .3s;
+                -o-transition: height .3s;
+                transition: height .3s
+            }
+            .site-nav .sub-menu.collapse {
+                display: none
+            }
+            .site-nav .sub-menu.collapse.in,
+            .site-nav .sub-menu.collapsing {
+                display: block
+            }
+            .site-nav .sub-menu .item-link {
+                text-transform: none
+            }
+            .site-nav .sub-menu .menu-item:last-child .sub-menu,
+            .site-nav .sub-menu .menu-item:last-child .sub-menu-in {
+                padding-bottom: 0
+            }
+            .site-nav .sub-menu-in {
+                margin: -8px 0 0;
+                padding-bottom: 10px
+            }
+            .site-nav .sub-menu-list {
+                margin: -8px 0 0
+            }
+            .site-nav .sub-menu_second {
+                margin: 0;
+                padding-left: 10px
+            }
+            .site-nav .sub-menu_second>.sub-menu-in {
+                margin-top: 1px
+            }
+            .site-nav .sub-menu_second>.sub-menu-in>.menu-item {
+                margin-bottom: 6px
+            }
+            .site-nav .sub-menu_second>.sub-menu-in>.menu-item:last-child {
+                margin-bottom: 0
+            }
+            .site-nav .sub-menu_third {
+                margin-top: 4px;
+                padding-left: 10px;
+                display: block
+            }
+            .site-nav .sub-menu_third .item-link {
+                padding: 3px 0;
+                color: #c1cfdb;
+                font-weight: 400
+            }
+        }
+
+        @media screen and (max-width:840px) {
+            .site-footer-top .chat-footer-title {
+                max-width: 100%;
+                text-align: center;
+                margin-right: 0
+            }
+            .site-footer-top .rd-btn-grid {
+                display: block
+            }
+            .site-footer-top .nav-footer-list-1 {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 1
+            }
+            .site-footer-top .item-2 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3
+            }
+            .site-footer-top .item-3 {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3
+            }
+            .site-footer-top .item-4 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4
+            }
+            .site-footer-top .item-5 {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 3;
+                grid-row-end: 4
+            }
+        }
+
+        @media only screen and (max-width:767px) {
+            .section-title,
+            .title {
+                font-size: 36px;
+                line-height: 1.39
+            }
+            .section-title span,
+            .title span {
+                font-size: 16px;
+                line-height: 1.5em
+            }
+            .section-title_decor,
+            .title_decor {
+                font-size: 22px;
+                line-height: 30px
+            }
+            .section-intro .row-btn .btn {
+                margin: 0 10px
+            }
+            .section-intro .row-btns .btn {
+                margin-left: 10px;
+                margin-right: 10px
+            }
+            .section-intro .footer-box {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column
+            }
+            .section-intro .footer-box .row-btn {
+                padding: 20px 0 4px
+            }
+            .section-intro .footer-box .btn {
+                min-width: 200px;
+                padding-left: 15px;
+                padding-right: 15px
+            }
+            .section-intro .gift-text {
+                font-size: 20px;
+                line-height: 28px
+            }
+        }
+
+        @media only screen and (max-width:740px) {
+            .section-intro .text {
+                font-size: 16px
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .site-header_clear .logo {
+                opacity: 1;
+                visibility: visible
+            }
+        }
+
+        @media screen and (max-width:560px) {
+            .site-footer .copy {
+                float: none;
+                text-align: center
+            }
+            .site-footer .copy-line {
+                display: block
+            }
+            .site-footer .social-footer {
+                float: none;
+                text-align: center
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+            .site-footer {
+                padding: 46px 0 0
+            }
+            .site-footer .footer-menu {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center
+            }
+        }
+
+        @media only screen and (max-width:460px) {
+            .section-intro .footer-box {
+                padding-left: 16px;
+                padding-right: 16px
+            }
+            .section-intro .gift-icon {
+                width: 40px;
+                height: 40px;
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 40px;
+                flex: 0 0 40px
+            }
+            .section-intro .gift-text {
+                font-size: 16px;
+                line-height: 22px
+            }
+        }
+
+        @media only screen and (max-width:420px) {
+            .section-intro_communications .title,
+            .section-intro_construction .title {
+                font-size: 26px
+            }
+        }
+
+
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background: #00131a;
+}
+footer .content {
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .content p,
+a {
+  color: #fff;
+}
+footer .content .box {
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .content .topic {
+  font-size: 22px;
+  font-weight: 600;
+  color: 222222ff;
+  margin-bottom: 16px;
+}
+footer .content p {
+  text-align: justify;
+}
+footer .content .lower .topic {
+  margin: 24px 0 5px 0;
+}
+footer .content .lower i {
+  padding-right: 16px;
+}
+footer .content .middle {
+  padding-left: 80px;
+}
+footer .content .middle a {
+  line-height: 32px;
+}
+footer .content .right input[type="text"] {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .content .right input[type="submit"] {
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.content .right input[type="submit"]:hover {
+  background: none;
+  color: #eb2f06;
+}
+footer .content .media-icons a {
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.content .media-icons a:hover {
+  border-color: #eb2f06;
+}
+footer .bottom {
+  width: 100%;
+  text-align: right;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a {
+  color: #000;
+}
+footer a {
+  transition: all 0.3s ease;
+}
+footer a:hover {
+  color: rgb(58, 236, 14);
+}
+@media (max-width: 1100px) {
+  footer .content .middle {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 950px) {
+  footer .content .box {
+    width: 50%;
+  }
+  .content .right {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 560px) {
+  footer {
+    position: relative;
+  }
+  footer .content .box {
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .content .middle {
+    padding-left: 0;
+  }
+}
+
+    </style>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'Products presented': 'crop monitoring'
+        });
+    </script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KJ7WS5T');
+    </script>
+</head>
+
+<body class="page-template ">
+    <div class=site-wrapper>
+        <header class=site-header>
+            <div class=site-header-main>
+                
+                <nav class="site-nav js-site-nav">
+                    <label class="logo">EzyFarm</label>
+                    <a href=javascript:void(0); class="btn-mob-menu js-btn-mob-menu"></a>
+                    <ul id=menu-primary-menu-en class="site-nav-list js-site-nav-list">
+                      <li class="menu-item js-menu-item">
+                        <div class="0 item-head"><a class=item-link href="ezyfarm.html">Home</a>
+                        </div>
+                    </li>
+                    <li class="menu-item js-menu-item">
+                      <div class="0 item-head"><a class=item-link href="about.html">About</a>
+                      </div>
+                  </li>
+                  <li class="menu-item js-menu-item">
+                    <div class="0 item-head"><a class=item-link href="disease.html">Diseases</a>
+                    </div>
+                </li>
+                        <li class="menu-item js-menu-item">
+                            <div class="0 item-head"><a class=item-link href="blog.html">Blog</a>
+                            </div>
+                        </li>
+                        <li class="menu-item js-menu-item">
+                            <div class="0 item-head"><a class=item-link href="contactus.html">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </nav>
+            </div>
+        </header>
+        <div class=wrapper>
+            <section class="section-intro section-intro_crops-single lazy" style data-bg=url(oats.jpg.webp)>
+                <div class=section-intro-main>
+                    <div class=section-intro-head>
+                        
+                    </div>
+                    <div class=section-intro-body>
+                        <div class=section-intro-content>
+                            <h1 class="title">How To Grow Oats And Get Increased Yields</h1>
+                        </div>
+                    </div>
+                </div>
+                <section class=section-banner-intro >
+                    <div class=section-center>
+                        <div class=banner-message>
+                            
+                            <div
+                                class=banner-title>Raise Oats Productivity with Crop Monitoring</div>
+                    </div>
+                    <div class=btn-box><a href="#" class="btn btn-lg arrow-effect ' '" target=_blank > See details <span class=icon> <span class=arrows> <span class="arrow arrow1"></span> <span class="arrow arrow2"></span> </span> </span> </a></div>
+        </div>
+        </section>
+        </section>
+        <section class=section-crops-article>
+            <div class=section-center>
+                <article class="article js-scroll-container">
+                    <p>Oats (Avena) is a plant of the Poaceae family. It is one of the oldest and most popular cereal plants, introduced into cultivation in the 2nd millennium BC. Oat has long been considered a useful, medicinal, and dietary plant. The crop
+                        is valued for the vitamins, fats, and high quality starch contained in its grain. Oat plant is also known for its anti-allergic properties. That is why oat is grown for the production of various types of cereals, oat flakes, flour,
+                        oatmeal, confectionery, baby and dietary food. In fodder production, oats are used in the form of whole or crushed grain, flour and bran, mainly for raising young livestock.</p>
+                    <div class=collapse-wrap>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse1 aria-expanded=false aria-controls=text-collapse itemprop=name>1. What are the types of oats?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse1 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>The genus Avena is represented by over 76 varieties, which include cultivated and wild oats. Here are the most widely used of those.</p>
+                                        <p><b>Avena sativa (Common oat)</b></p>
+                                        <p>This is the most widely grown and used type of oats. The homeland of common oats is Mongolia and the northeastern provinces of China. This variety is popular due to the large nutrients content and its ability to
+                                            grow on almost any <a href="#">soil type</a>, except sandy and lime lands. It is used in pharmaceutical, cosmetology, and culinary
+                                            industries as a component of dietary, sports and children&#8217;s nutrition due to its high content of protein, amino acids, and high digestion rate.</p>
+                                        <p><b>Avena byzantina (Algerian or Red oat)</b></p>
+                                        <p>This type of oats is planted mostly for fodder in countries with a warm Mediterranean climate, which makes it more resistant to drought than the common oats.</p>
+                                        <p><b>Avena nuda (Naked oat)</b></p>
+                                        <p>This is a special type of oats the grains of which lack a membranous hull. Such oats do not undergo mechanical hulling, which allows for retaining high germination rate. Such oats are more energy-rich than hulled
+                                            oats. Naked oat has a significantly higher protein and fat content, as well as antiviral and antibacterial substances, such as lysine and methionine.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse3 aria-expanded=false aria-controls=text-collapse itemprop=name>3. What are oats growing conditions?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse3 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p><b>Best climate for growing oats</b></p>
+                                        <p>Oats prefer temperate climates. Its seeds begin to germinate at a temperature of 2-3 °C. During germination and tillering, cool weather (15-18 °C) is preferable. Seedlings also tolerate short-term spring frosts
+                                            of 8 &#8211; 9 °C.</p>
+                                        <p>Due to their rapidly developing root system, the crop suffers less from spring droughts than <a href=#>spring wheat</a> and <a href=#>barley</a>.
+                                            But the plants tolerate high temperatures and summer air droughts worse than spring wheat and barley.</p>
+                                        <p>Oats are moisture-loving plants that prefer wet soils. The grains absorb 60% of water by their weight. The crop gives the best yields in wet years with precipitation in the first half of summer. Rainy weather in
+                                            the second half of summer in the northern regions greatly prolongs the growing season, as a result of which the oats do not ripen before the frosts.</p>
+                                        <p><b>Best soil for growing oats</b></p>
+                                        <p>Oats are less demanding when it comes to soils than other spring crops, since its well-developed root system has a high assimilating ability. It develops to a depth of 120 cm and a width of up to 80 cm. In addition,
+                                            it has the ability to extract nutrients from hardly soluble soil compounds.</p>
+                                        <p>Oats can grow on sandy loam, loamy, clayey and peat soils. It succeeds better than other grain crops on acidic (pH 5.0 &#8211; 6.0) soils and drained peatlands.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse4 aria-expanded=false aria-controls=text-collapse itemprop=name>4. What are oats growth stages?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse4 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Here are the main growth stages of oats.</p>
+                                        <p><b>0. Germination</b></p>
+                                        <p>At this stage, the seeds take up water, swell, and begin to grow. This is the stage when oat seed is the most vulnerable to diseases.</p>
+                                        <p><b>1. Leaf development</b></p>
+                                        <p>At this stage of oats growth, the first leaf of the plant appears, penetrating the surface.</p>
+                                        <p><b>2. Tillering</b></p>
+                                        <p>At this stage, additional stems called &#8220;tillers&#8221; appear, attached to the main stem below the ground. Tillering stage lasts until the plant stops producing leaves and changes to the reproductive form.</p>
+                                        <p><b>3. Stem elongation</b></p>
+                                        <p>This stage of oats growth is also known as &#8220;jointing&#8221; and refers to the nodes (joints) that appear above the ground at this stage.</p>
+                                        <p><b>4. Flowering</b></p>
+                                        <p>This is the blooming stage of oats growth. The top of the panicle is first to bloom. Flowering proceeds down the outside of the panicle. Plant blooming may begin before the head fully emerges from the boot. The
+                                            anthers are usually not visible.</p>
+                                        <p><b>5. Ripening</b></p>
+                                        <p>At this stage, the grain has reached its full size and is fully developed. Drying occurs as water is lost. Length of this period is greatly affected by weather conditions.</p>
+                                        <p><b>6: Senescence</b></p>
+                                        <p>This is the last of oats growth stages. The plant has reached full maturity and is ready for harvesting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse5 aria-expanded=false aria-controls=text-collapse itemprop=name>5. How to prepare a field for planting oats?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse5 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Land preparation for sowing oats is not very different from land preparation for planting spring wheat and barley and consists of several main stages.</p>
+                                        <p>At the first stage of preparing land for farming, the soil is cultivated with disc harrows to a depth of 6-8 cm to destroy the remaining weeds. The next harrowing is carried out deeper (10-12 cm) when weed rosettes
+                                            appear.</p>
+                                        <p>After that, fall plowing is carried out to a depth of 20-22 cm or deeper if the field was very weedy. If the predecessor was corn, land preparation should include soil cultivation with heavy disc furrows in two
+                                            directions, and then fall plowing at a depth of 27-30 cm. Potatoes and sugar beets allow for replacing winter plowing with light shallow soil cultivation.</p>
+                                        <p>In spring, harrowing and trailing are carried out to preserve moisture at the depth of seeding.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse6 aria-expanded=false aria-controls=text-collapse itemprop=name>6. When to plant oats?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse6 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>It’s better to start planting oats as early as possible and finish as soon as possible. A delay of sowing may sharply reduce yields. Early sowing is especially important in the arid conditions of the southeast with
+                                            low rainfall and frequent droughts.</p>
+                                        <p><b>When to plant oats in spring</b></p>
+                                        <p>When deciding on the dates for oats planting in spring, rely on the weather. As soon as the snow has melted from the fields, it is the best time to start planting. Sowing in soil with a lot of moisture will help
+                                            the seeds swell and germinate faster. Therefore, it is possible to sow at a temperature of -0 + 2 °C, and even if the frosts hit later, the crops will survive.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse7 aria-expanded=false aria-controls=text-collapse itemprop=name>7. How to plant oats?</button>
+                            <div class="collapse js-collapse" id=text-collapse7
+                                aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Before planting, it’s critical to prepare the grains. The preparation of oat grains for sowing involves the separation of seeds into the first and second grains, which differ significantly from each other in shape
+                                            and size. The first grains develop into plants with good tillering and high yields. Plants growing from second grains are less productive.</p>
+                                        <p>Before sowing oats, its seeds have to be treated with 40% formalin 5 days before sowing. Seed treatment is carried out in dry and semi-dry methods. This contributes to the preservation of grains in spring without
+                                            reducing germination. It is performed 30-60 days before sowing.</p>
+                                        <p>It should be noted that only seeds with a moisture content of less than 14% are subject to pre-treatment. If the moisture content is more than 17%, the seeds should be treated in a semi-dry method 2 &#8211; 3 days
+                                            before sowing.</p>
+                                        <p>Oats are sown with row spacing of 15 cm. The seeding rate for oats is approximately 20-25 g of seeds for each square meter. On heavy soils, oats seeds planting depth is 3 cm, on cultivated soils – 2 cm, on light
+                                            and dry soils – 4 &#8211; 6 cm.</p>
+                                        <p>On heavy soils (before emergence), light harrowing can be carried out to break up the soil crust and kill germinating weeds. The second harrowing can be carried out during the tillering period to reduce the number
+                                            of weeds.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse8 aria-expanded=false aria-controls=text-collapse itemprop=name>8. Which fertilizers are best for oats?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse8 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>The massive root system of the plant allows efficient use of <a href=#>soil fertility</a> and nutrients left from the predecessor. Grain
+                                            quality and yields directly depend on the timely application of organic fertilizers for the predecessor. For the formation of 1 ton of grain oats need 29-31% of nitrogen, 10-12% of phosphorus, and 32-37% of
+                                            potassium. Phosphorus and potassium fertilizers are applied before the main treatment of the soil, and nitrogen fertilizers are applied before pre-sowing cultivation (50-60%). The rest of oats fertilizers are
+                                            applied at the stage of plant tillering.</p>
+                                        <p>Oats fertilizers requirements include not only mineral but also organic fertilizers. The application of P &#8211; 40-60 kg / ha, K &#8211; 25-30 kg / ha, N &#8211; 20-30 kg / ha allows for getting a yield of 40
+                                            centners of grain per hectare.</p>
+                                        <p>Keep in mind that when growing oats for use in baby food production, it is crucial not to overapply pesticides and fertilizers.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse9 aria-expanded=false aria-controls=text-collapse itemprop=name>9. How to water oats?</button>
+                            <div class="collapse js-collapse" id=text-collapse9
+                                aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Seedlings of this cereal do not require much care and are very easy to grow. In terms of oats water requirements, it is usually grown as a rain-fed crop. But if there is no rain, organize the supply of water to
+                                            the plants and maintain the necessary soil moisture, otherwise the required volume of green mass will not grow.</p>
+                                        <p>Despite all this, oats is a water-loving crop and is more demanding in terms of soil moisture than barley and should be watered more often. Oats watering is carried out at the stages of plant’s tillering, booting,
+                                            and at the beginning of grain filling with average rates of 450 &#8211; 550 m3 / ha. The watering of oats is necessary when the soil moisture is below 70-75%. If the weather is hot and dry, oats should be watered
+                                            every 3 days.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse10 aria-expanded=false aria-controls=text-collapse itemprop=name>10. How to protect oats from pests?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse10 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Here are the most common pests affecting oats and oats pest control measures to protect the crop from them:</p>
+                                        <p><b>Oats aphid</b></p>
+                                        <p>This oats pest sucks juices from the plant&#8217;s leaves and stems. Damaged leaves lose color, turn yellow, and die off. The weight of the grain is also reduced.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Stubble plowing and fall plowing</li>
+                                            <li>Early sowing</li>
+                                            <li>Selection of early maturing varieties</li>
+                                        </ul>
+                                        <p><b>Cereal leaf beetle</b></p>
+                                        <p>These beetles eat out the elongated holes in leaves. The larvae leave the epidermis untouched on the underside.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Stubble plowing to a depth of 10-12 cm and early fall plowing</li>
+                                            <li>Spring harrowing and presowing cultivation</li>
+                                        </ul>
+                                        <p><b>Stem sawflies</b></p>
+                                        <p>The larva of this oats insect moves down the stem, feeding on its insides, causing the stem to break off eventually.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Deep fall plowing</li>
+                                            <li>Early sowing</li>
+                                            <li>Early harvesting</li>
+                                        </ul>
+                                        <p><b>Frit fly</b></p>
+                                        <p>This oats insect damages the seedlings of a plant. The larvae feed on embryonic tissues inside the lower part of a young stem until the growth of the stem stops. The signs of damage are wilting and yellowing of
+                                            the central leaf. If the main stem is damaged, the plant dies or the yield is reduced by about half compared to a healthy plant.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Optimal sowing dates</li>
+                                            <li>Stubble plowing and fall plowing</li>
+                                        </ul>
+                                        <p><b>Oats weevil</b></p>
+                                        <p>The formed young beetles of this pest eat out holes in the caryopsis and come out, then repeating the development cycle.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Preparation of storages before receiving and placing grain there</li>
+                                            <li>Cleaning and disinfestation by wet or aerosol treatment</li>
+                                            <li>Comprehensive examination of all objects on contamination</li>
+                                            <li>Grain preparation: drying grain to a state of dry or medium dryness, destruction of broken grains</li>
+                                            <li>Maximum decrease in grain temperature</li>
+                                            <li>Grain spraying with contact insecticides</li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse11 aria-expanded=false aria-controls=text-collapse itemprop=name>11. How to protect oats from diseases?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse11 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Here are the most common oats diseases and the ways to protect the crop from them:</p>
+                                        <p><b>Root rot</b></p>
+                                        <p>This disease manifests itself in the browning of the coleoptile, yellowing and deformation of leaves, rotting, browning and blackening of the primary and secondary roots. Plants stop growing, the grains turn brown
+                                            and wrinkle, the stem rots and breaks eventually.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Selection of relatively resistant varieties</li>
+                                            <li>Crop rotation</li>
+                                            <li>Stubble plowing and early fall plowing</li>
+                                            <li>Application of phosphorus fertilizers</li>
+                                            <li>Presowing seed treatment</li>
+                                        </ul>
+                                        <p><b>Crown rust</b></p>
+                                        <p>The first signs of this disease are detected in the late stages of oats development – after heading or at the time of grain filling. The leaves are covered with small, scattered, bright orange pustules. The pustules
+                                            may also appear on the leaf sheaths, stems and panicles. Eventually, they burst to release thousands of microscopic spores.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Fungicides application</li>
+                                            <li>Selection of resistant varieties</li>
+                                            <li>Stubble plowing and early deep winter plowing</li>
+                                            <li>Disinfection and pre-sowing seed treatment with microelements (molybdenum, zinc, copper, manganese, cobalt)</li>
+                                            <li>Weed control</li>
+                                            <li>Crop rotation</li>
+                                        </ul>
+                                        <p><b>Smut</b></p>
+                                        <p>This disease destroys the spikelets of the plant, turning them into a black-olive spore mass. Only the axial parts of the spikelets and panicles are preserved. Sometimes only the lower part of the panicle is affected.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Crop rotation</li>
+                                            <li>Right sowing terms and methods</li>
+                                            <li>Use of trace elements (boron, cobalt, molybdenum, copper, manganese)</li>
+                                            <li>Seed treatment</li>
+                                        </ul>
+                                        <p><b>Septoria</b></p>
+                                        <p>This is a leaf spot disease, the development of which is facilitated by wet weather in the second half of plant development.</p>
+                                        <p><i>Protection measures:</i></p>
+                                        <ul>
+                                            <li>Plowing of crop residues</li>
+                                            <li>Application of mineral fertilizers and trace elements (manganese, boron, copper)</li>
+                                        </ul>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse12 aria-expanded=false aria-controls=text-collapse itemprop=name>12. How to harvest oats?</button>
+                            <div class="collapse js-collapse"
+                                id=text-collapse12 aria-expanded=false style="height: 0;">
+                                <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                    <div itemprop=text>
+                                        <p>Optimal harvesting time is an important step in the fight against yield losses. To shorten oats harvesting time and reduce grain losses to a minimum, it is better to use both swathing and direct combining. The advantage
+                                            of swathing is that harvesting can be started 5 &#8211; 6 days earlier, in the phase of wax ripeness, with a grain moisture content of 40 &#8211; 60%. At this time, the flow of plastic substances into the grain
+                                            ends, but biochemical processes continue, leading to its physiological maturation. The best quality grain with a higher yield is obtained when harvesting oats in the middle of waxy ripeness. With swathing, the
+                                            grain is drier (by 5 &#8211; 8%) and cleaner.</p>
+                                        <p>In the northern regions with an unstable climate, direct combining is a better option for oats harvesting. In this case, harvesting is carried out at the end of the full ripeness phase, which is characterised by
+                                            the golden color of the straw and the panicle, the latter ripening faster than the straw. When harvesting lodged grain, the direction of movement of the machine must be chosen correctly. One-sided harvesting
+                                            of very lodged crops increases labor and fuel costs, but reduces grain losses, which makes it economically justified.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+                    <div class=collapse-box itemscope itemprop=mainEntity itemtype=https://schema.org/Question> <button class="collapse-btn collapsed" type=button data-toggle=collapse data-target=#text-collapse15 aria-expanded=false aria-controls=text-collapse itemprop=name>15. How to increase oats yields?</button>
+                        <div class="collapse js-collapse"
+                            id=text-collapse15 aria-expanded=false style="height: 0;">
+                            <div class=collaspe-in itemscope itemprop=acceptedAnswer itemtype=https://schema.org/Answer>
+                                <div itemprop=text>
+                                    <p>Here are the factors that farmers need to consider when planning to increase oats yields:</p>
+                                    <p><b>Oats variety</b></p>
+                                    <p>When planting oats, use only those varieties that have proved to form high yields consistently, without decrease in grain quality.</p>
+                                    <p><b>Fertilizers application</b></p>
+                                    <p>To receive high oats yields, pay significant attention to the amount of applied nutrients. For instance, the use of nitrogen fertilizers increases oats yields, improves grain quality, and promotes the accumulation of
+                                        protein in the grain.</p>
+                                    <p><b>Crop rotation</b></p>
+                                    <p>To ensure high oats yields, it is crucial to put it in the right place in the <a href=#>crop rotation</a>, depending on the purpose of growing. Permanent
+                                        sowing of oats for 3 years highly reduces its yields, even despite the use of herbicides and mineral fertilizers.</p>
+                                    <p><b>Soil cultivation</b></p>
+                                    <p>Timely and high-quality tillage is one of the most important conditions for obtaining high and stable yields of oats. The implementation of all methods of tillage contributes to an increase in fertility, ensures the
+                                        regulation of water, air, nutritional regimes, and creates conditions for the development of roots. The cultivation system depends on the type and properties of the soil, weather conditions, predecessor, weediness
+                                        of the field, and the characteristics of oats variety.</p>
+                                    <p><b>Time of sowing and harvesting</b></p>
+                                    <p>The highest yields of oats are obtained when sowing it early. A 7-day delay in sowing reduces yield by 20% and increases the risk of grain frost damage. The right harvesting time and methods are also crucial to receive
+                                        high oats yields. It should be decided depending on the crop maturity and particular climate conditions.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </article>
+            
+    <aside class="sidebar-box fixed-aside">
+        <div class=container>
+            <div class="sidebar js-fixed-col">
+                <div class="inner js-fixed-inner">
+                    <div class=widget-area>
+                        <div class=widget> <a href=https://eos.com/products/crop-monitoring/crops/ class=back-link>All Crops</a>
+                            <div class=sidebar-list>
+                                <div class=sidebar-item> <a href="corn.html" class=sidebar-link>How to Grow Corn</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Sunflower</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Wheat</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Barley</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Soybeans</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Cotton</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Sorgo</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Sugarcane</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Rapeseed</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Flax</a></div>
+                                <div class=sidebar-item> <a href=# class=sidebar-link>How to Grow Rye</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    </div>
+    </section>
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">About us</div>
+              <p>
+                Ezyfarming is a Agriculture wbsite developed for managing the various Crop type in agriculture feild.
+              </p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contact us</div>
+              <div class="phone">
+                <a href="tel:+91 9740595079"><i class="fas fa-phone-volume"></i>+91 9740595079</a>
+              </div>
+              <div class="email">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akashrp512@gmail.com"
+                  ><i class="fas fa-envelope"></i>akashrp512@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">content</div>
+            <div><a href="ezyfarm.html">Home</a></div>
+            <div><a href="about.html">About</a></div>
+            <div><a href="disease.html">Diseases</a></div>
+            <div><a href="blog.html">Blog</a></div>
+            <div><a href="contactus.html">Contact us</a></div>
+            
+           
+          
+              <div class="media-icons">
+                <a href="https://www.facebook.com/akash.rp512"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/akash.rp777/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/Akashrp3"><i class="fab fa-twitter"></i></a>
+               
+                <a href="https://www.linkedin.com/in/akash-rp-8794911b9/"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright © 2022 <a href="ezyfarm.html">EzyFarming</a> All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+   
+    </div>
+   
+    
+    <div
+        class="rd-modal modal fade rd-modal-message-sent" tabindex=-1 role=dialog id=blogSubscriptionCheck>
+        <div class=rd-modal-dialog role=document> <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+            <div class=rd-modal-content> <span class=icon></span>
+                <h3 class="rd-modal-title">Thank you</h3>
+                <div class=message>You've been successfuly subscribed to our newsletter and will hear from us soon!</div>
+            </div>
+        </div>
+        </div><a href=javascript:void(0); class="btn-scroll-top animated invisibe"> <svg id=Layer_1 xmlns=http://www.w3.org/2000/svg width=12 height=8 viewBox="0 0 12 8"> <path d="M6 0L0 6L1.41 7.41L6 2.83L10.59 7.41L12 6L6 0Z" fill=#fff /> </svg> </a>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel=preload as=style onload="this.rel='stylesheet'">
+            <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel=preload as=style onload="this.rel='stylesheet'">
+                 
+            <script src='https://static.eos.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id=jquery-core-js></script>
+           
+           
+            <script src='https://static.eos.com/wp-content/themes/eos/assets/dist/page-crops-management-single.js?ver=1642584775' id=page-crops-management-single-js></script>
+        
+            <script>
+                (function() {
+                    var expirationDate = new Date();
+                    expirationDate.setTime(expirationDate.getTime() + 31536000 * 1000);
+                    document.cookie = "pll_language=en; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+                }());
+            </script>
+            <script>
+                var fired = false;
+
+                function loadReCapcha() {
+                    if (fired === false) {
+                        var abcf7head = document.getElementsByTagName('head')[0],
+                            script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = 'https://www.google.com/recaptcha/api.js?render=6Ldoo7EUAAAAAE0D5PD02cmXtppt7ZCiRNfjBViv&ver=3.0';
+                        abcf7head.appendChild(script);
+                        var wpcf7_recaptcha = {
+                            "sitekey": "6Ldoo7EUAAAAAE0D5PD02cmXtppt7ZCiRNfjBViv",
+                            "actions": {
+                                "homepage": "homepage",
+                                "contactform": "contactform"
+                            }
+                        };
+                        setTimeout(function() {
+                            wpcf7_recaptcha.execute = function(action) {
+                                grecaptcha.execute(wpcf7_recaptcha.sitekey, {
+                                    action: action
+                                }).then(function(token) {
+                                    var event = new CustomEvent('wpcf7grecaptchaexecuted', {
+                                        detail: {
+                                            action: action,
+                                            token: token,
+                                        },
+                                    });
+                                    document.dispatchEvent(event);
+                                });
+                            };
+                            wpcf7_recaptcha.execute_on_homepage = function() {
+                                wpcf7_recaptcha.execute(wpcf7_recaptcha.actions['homepage']);
+                            };
+                            wpcf7_recaptcha.execute_on_contactform = function() {
+                                wpcf7_recaptcha.execute(wpcf7_recaptcha.actions['contactform']);
+                            };
+                            grecaptcha.ready(wpcf7_recaptcha.execute_on_homepage);
+                            document.addEventListener('change', wpcf7_recaptcha.execute_on_contactform);
+                            document.addEventListener('wpcf7submit', wpcf7_recaptcha.execute_on_homepage);
+                            document.addEventListener('wpcf7grecaptchaexecuted', function(event) {
+                                var fields = document.querySelectorAll("form.wpcf7-form input[name='_wpcf7_recaptcha_response']");
+                                for (var i = 0; i < fields.length; i++) {
+                                    var field = fields[i];
+                                    field.setAttribute('value', event.detail.token);
+                                }
+                            });
+                        }, 4000);
+                        fired = true;
+                    }
+                }
+                jQuery(document).on('scroll', loadReCapcha);
+                jQuery('body').on('focus', 'input', loadReCapcha);
+            </script>
+            <style>
+                img.lazy {
+                    min-height: 1px
+                }
+            </style>
+            <script>
+                function _toConsumableArray(t) {
+                    return _arrayWithoutHoles(t) || _iterableToArray(t) || _nonIterableSpread()
+                }
+
+                function _nonIterableSpread() {
+                    throw new TypeError("Invalid attempt to spread non-iterable instance")
+                }
+
+                function _iterableToArray(t) {
+                    if (Symbol.iterator in Object(t) || "[object Arguments]" === Object.prototype.toString.call(t)) return Array.from(t)
+                }
+
+                function _arrayWithoutHoles(t) {
+                    if (Array.isArray(t)) {
+                        for (var e = 0, n = new Array(t.length); e < t.length; e++) n[e] = t[e];
+                        return n
+                    }
+                }
+
+                function _extends() {
+                    return (_extends = Object.assign || function(t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = arguments[e];
+                            for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (t[r] = n[r])
+                        }
+                        return t
+                    }).apply(this, arguments)
+                }
+
+                function _typeof(t) {
+                    return (_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
+                        return typeof t
+                    } : function(t) {
+                        return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+                    })(t)
+                }! function(t, e) {
+                    "object" === ("undefined" == typeof exports ? "undefined" : _typeof(exports)) && "undefined" != typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define(e) : t.LazyLoad = e()
+                }(this, function() {
+                    "use strict";
+                    var t = "undefined" != typeof window,
+                        e = t && !("onscroll" in window) || "undefined" != typeof navigator && /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent),
+                        n = t && "IntersectionObserver" in window,
+                        r = t && "classList" in document.createElement("p"),
+                        o = {
+                            elements_selector: "img",
+                            container: e || t ? document : null,
+                            threshold: 300,
+                            thresholds: null,
+                            data_src: "src",
+                            data_srcset: "srcset",
+                            data_sizes: "sizes",
+                            data_bg: "bg",
+                            class_loading: "loading",
+                            class_loaded: "loaded",
+                            class_error: "error",
+                            load_delay: 0,
+                            auto_unobserve: !0,
+                            callback_enter: null,
+                            callback_exit: null,
+                            callback_reveal: null,
+                            callback_loaded: null,
+                            callback_error: null,
+                            callback_finish: null,
+                            use_native: !1
+                        },
+                        a = function(t, e) {
+                            var n, r = new t(e);
+                            try {
+                                n = new CustomEvent("LazyLoad::Initialized", {
+                                    detail: {
+                                        instance: r
+                                    }
+                                })
+                            } catch (t) {
+                                (n = document.createEvent("CustomEvent")).initCustomEvent("LazyLoad::Initialized", !1, !1, {
+                                    instance: r
+                                })
+                            }
+                            window.dispatchEvent(n)
+                        };
+                    var i = function(t, e) {
+                            return t.getAttribute("data-" + e)
+                        },
+                        s = function(t, e, n) {
+                            var r = "data-" + e;
+                            null !== n ? t.setAttribute(r, n) : t.removeAttribute(r)
+                        },
+                        c = function(t) {
+                            return "true" === i(t, "was-processed")
+                        },
+                        l = function(t, e) {
+                            return s(t, "ll-timeout", e)
+                        },
+                        u = function(t) {
+                            return i(t, "ll-timeout")
+                        },
+                        f = function(t, e) {
+                            t && t(e)
+                        },
+                        d = function(t, e) {
+                            t._loadingCount += e, 0 === t._elements.length && 0 === t._loadingCount && f(t._settings.callback_finish)
+                        },
+                        _ = function(t) {
+                            for (var e, n = [], r = 0; e = t.children[r]; r += 1) "SOURCE" === e.tagName && n.push(e);
+                            return n
+                        },
+                        v = function(t, e, n) {
+                            n && t.setAttribute(e, n)
+                        },
+                        b = function(t, e) {
+                            v(t, "sizes", i(t, e.data_sizes)), v(t, "srcset", i(t, e.data_srcset)), v(t, "src", i(t, e.data_src))
+                        },
+                        m = {
+                            IMG: function(t, e) {
+                                var n = t.parentNode;
+                                n && "PICTURE" === n.tagName && _(n).forEach(function(t) {
+                                    b(t, e)
+                                });
+                                b(t, e)
+                            },
+                            IFRAME: function(t, e) {
+                                v(t, "src", i(t, e.data_src))
+                            },
+                            VIDEO: function(t, e) {
+                                _(t).forEach(function(t) {
+                                    v(t, "src", i(t, e.data_src))
+                                }), v(t, "src", i(t, e.data_src)), t.load()
+                            }
+                        },
+                        g = function(t, e) {
+                            var n, r, o = e._settings,
+                                a = t.tagName,
+                                s = m[a];
+                            if (s) return s(t, o), d(e, 1), void(e._elements = (n = e._elements, r = t, n.filter(function(t) {
+                                return t !== r
+                            })));
+                            ! function(t, e) {
+                                var n = i(t, e.data_src),
+                                    r = i(t, e.data_bg);
+                                n && (t.style.backgroundImage = 'url("'.concat(n, '")')), r && (t.style.backgroundImage = r)
+                            }(t, o)
+                        },
+                        y = function(t, e) {
+                            r ? t.classList.add(e) : t.className += (t.className ? " " : "") + e
+                        },
+                        h = function(t, e) {
+                            r ? t.classList.remove(e) : t.className = t.className.replace(new RegExp("(^|\s+)" + e + "(\s+|$)"), " ").replace(/^\s+/, "").replace(/\s+$/, "")
+                        },
+                        p = function(t, e, n) {
+                            t.addEventListener(e, n)
+                        },
+                        E = function(t, e, n) {
+                            t.removeEventListener(e, n)
+                        },
+                        w = function(t, e, n) {
+                            E(t, "load", e), E(t, "loadeddata", e), E(t, "error", n)
+                        },
+                        A = function(t, e, n) {
+                            var r = n._settings,
+                                o = e ? r.class_loaded : r.class_error,
+                                a = e ? r.callback_loaded : r.callback_error,
+                                i = t.target;
+                            h(i, r.class_loading), y(i, o), f(a, i), d(n, -1)
+                        },
+                        I = function(t, e) {
+                            var n = function n(o) {
+                                    A(o, !0, e), w(t, n, r)
+                                },
+                                r = function r(o) {
+                                    A(o, !1, e), w(t, n, r)
+                                };
+                            ! function(t, e, n) {
+                                p(t, "load", e), p(t, "loadeddata", e), p(t, "error", n)
+                            }(t, n, r)
+                        },
+                        k = ["IMG", "IFRAME", "VIDEO"],
+                        L = function(t, e) {
+                            var n = e._observer;
+                            S(t, e), n && e._settings.auto_unobserve && n.unobserve(t)
+                        },
+                        O = function(t) {
+                            var e = u(t);
+                            e && (clearTimeout(e), l(t, null))
+                        },
+                        x = function(t, e) {
+                            var n = e._settings.load_delay,
+                                r = u(t);
+                            r || (r = setTimeout(function() {
+                                L(t, e), O(t)
+                            }, n), l(t, r))
+                        },
+                        S = function(t, e, n) {
+                            var r = e._settings;
+                            !n && c(t) || (k.indexOf(t.tagName) > -1 && (I(t, e), y(t, r.class_loading)), g(t, e), function(t) {
+                                s(t, "was-processed", "true")
+                            }(t), f(r.callback_reveal, t), f(r.callback_set, t))
+                        },
+                        z = function(t) {
+                            return !!n && (t._observer = new IntersectionObserver(function(e) {
+                                e.forEach(function(e) {
+                                    return function(t) {
+                                        return t.isIntersecting || t.intersectionRatio > 0
+                                    }(e) ? function(t, e) {
+                                        var n = e._settings;
+                                        f(n.callback_enter, t), n.load_delay ? x(t, e) : L(t, e)
+                                    }(e.target, t) : function(t, e) {
+                                        var n = e._settings;
+                                        f(n.callback_exit, t), n.load_delay && O(t)
+                                    }(e.target, t)
+                                })
+                            }, {
+                                root: (e = t._settings).container === document ? null : e.container,
+                                rootMargin: e.thresholds || e.threshold + "px"
+                            }), !0);
+                            var e
+                        },
+                        C = ["IMG", "IFRAME"],
+                        N = function(t, e) {
+                            return function(t) {
+                                return t.filter(function(t) {
+                                    return !c(t)
+                                })
+                            }((n = t || function(t) {
+                                return t.container.querySelectorAll(t.elements_selector)
+                            }(e), Array.prototype.slice.call(n)));
+                            var n
+                        },
+                        M = function(t) {
+                            var e = t._settings;
+                            _toConsumableArray(e.container.querySelectorAll("." + e.class_error)).forEach(function(t) {
+                                h(t, e.class_error),
+                                    function(t) {
+                                        s(t, "was-processed", null)
+                                    }(t)
+                            }), t.update()
+                        },
+                        R = function(e, n) {
+                            var r;
+                            this._settings = function(t) {
+                                return _extends({}, o, t)
+                            }(e), this._loadingCount = 0, z(this), this.update(n), r = this, t && window.addEventListener("online", function(t) {
+                                M(r)
+                            })
+                        };
+                    return R.prototype = {
+                        update: function(t) {
+                            var n, r = this,
+                                o = this._settings;
+                            (this._elements = N(t, o), !e && this._observer) ? (function(t) {
+                                return t.use_native && "loading" in HTMLImageElement.prototype
+                            }(o) && ((n = this)._elements.forEach(function(t) {
+                                -1 !== C.indexOf(t.tagName) && (t.setAttribute("loading", "lazy"), S(t, n))
+                            }), this._elements = N(t, o)), this._elements.forEach(function(t) {
+                                r._observer.observe(t)
+                            })) : this.loadAll()
+                        },
+                        destroy: function() {
+                            var t = this;
+                            this._observer && (this._elements.forEach(function(e) {
+                                t._observer.unobserve(e)
+                            }), this._observer = null), this._elements = null, this._settings = null
+                        },
+                        load: function(t, e) {
+                            S(t, this, e)
+                        },
+                        loadAll: function() {
+                            var t = this;
+                            this._elements.forEach(function(e) {
+                                L(e, t)
+                            })
+                        }
+                    }, t && function(t, e) {
+                        if (e)
+                            if (e.length)
+                                for (var n, r = 0; n = e[r]; r += 1) a(t, n);
+                            else a(t, e)
+                    }(R, window.lazyLoadOptions), R
+                });
+                window.w3tc_lazyload = new LazyLoad({
+                    elements_selector: ".lazy",
+                    callback_loaded: function(t) {
+                        var e;
+                        try {
+                            e = new CustomEvent("w3tc_lazyload_loaded", {
+                                detail: {
+                                    e: t
+                                }
+                            })
+                        } catch (a) {
+                            (e = document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded", !1, !1, {
+                                e: t
+                            })
+                        }
+                        window.dispatchEvent(e)
+                    }
+                });
+            </script>
+</body>
+
+</html>
